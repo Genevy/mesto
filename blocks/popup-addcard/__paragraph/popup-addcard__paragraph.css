@@ -1,0 +1,15 @@
+.popup-addcard__paragraph {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0 0 0 36px;
+  padding-bottom: 44px;
+}
+
+@media screen and (max-width: 575px) {
+  .popup-addcard__paragraph {
+    font-size: 18px;
+    margin-left: 22px;
+    padding-bottom: 64px;
+  }
+}

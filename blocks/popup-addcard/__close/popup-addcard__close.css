@@ -1,0 +1,29 @@
+.popup-addcard__close {
+  width: 32px;
+  height: 32px;
+  background-image: url(../../../images/Close.png);
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  padding: 0;
+  transition: opacity 0.3s linear;
+}
+
+@media screen and (max-width: 575px) {
+  .popup-addcard__close {
+    width: 20px;
+    height: 20px;
+    right: 0;
+    top: -36px;
+  }
+}
+
+.popup-addcard__close:hover {
+  opacity: 0.6;
+}

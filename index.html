@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+  <html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Место</title>
+    <link rel="stylesheet" href="./pages/index.css">
+  </head>
+  <body class="page">
+    <div class="wrapper">
+      <header class="header">
+        <img class="header__logo" src="./images/logo.svg" alt="Место Россия">
+      </header>
+      <main class="content">
+        <section class="profile">
+          <div class="profile__info">
+            <img class="profile__foto" src="./images/fotoProfile.png" alt="Изображение профиля">
+            <div class="profile__select-name">
+              <div class="profile__text">
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <p class="profile__profession">Исследователь океана</p>
+              </div>
+              <button class="profile__button" type="button" aria-label="Редактировать"></button>
+            </div>
+          </div>
+          <button class="profile__addButton" type="button" name="addCard" aria-label="Добавить"></button>
+        </section>
+        <section class="photo-grids" aria-label="Карточки мест"></section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">© 2022 Mesto Russia</p>
+      </footer>
+    </div>
+    <div class="popup-profile">
+      <div class="popup-profile__container">
+        <button class="popup-profile__close" type="button" aria-label="Закрыть"></button>
+        <h3 class="popup-profile__paragraph">Редактировать профиль</h3>
+        <form action="#" name="addProfile">
+          <input class="popup-profile__text" type="text" placeholder="Введите имя" name="addName" autocomplete="off" required>
+          <input class="popup-profile__text" type="text" placeholder="Введите должность" name="addJob" autocomplete="off" required>
+          <input class="popup-profile__button" type="submit" value="Сохранить" name="sendForm">
+        </form>
+      </div>
+    </div>
+    <div class="popup-addcard">
+      <div class="popup-addcard__container">
+        <button class="popup-addcard__close" type="button" aria-label="Закрыть"></button>
+        <h3 class="popup-addcard__paragraph">Новое место</h3>
+        <form action="#" name="addCard">
+          <input class="popup-addcard__text" type="text" placeholder="Название" name="namePlace" autocomplete="off" required>
+          <input class="popup-addcard__text" type="url" placeholder="Ссылка на картинку" name="linkPlace" autocomplete="off" required>
+          <input class="popup-addcard__button" type="submit" value="Создать" name="sendForm">
+        </form>
+      </div>
+    </div>
+    <div class="popup-foto">
+      <figure class="popup-foto__figure">
+        <button class="popup-foto__close" type="button" aria-label="Закрыть"></button>
+        <img class="popup-foto__foto" src="#" alt="" title="">
+        <figcaption>
+          <p class="popup-foto__caption"></p>
+        </figcaption>
+      </figure>
+    </div>
+    <template class="template-card">
+      <article class="photo-grids__card">
+        <button class="photo-grids__cart" type="button" aria-label="Удалить"></button>
+        <img class="photo-grids__foto" src="#" alt="" title="">
+        <div class="photo-grids__panel">
+          <h2 class="photo-grids__text"></h2>
+          <button class="photo-grids__button" type="button" aria-label="Нравится"></button>
+        </div>
+      </article>
+    </template>
+    <script src="./scripts/initialCards.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

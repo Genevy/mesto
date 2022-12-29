@@ -1,0 +1,9 @@
+.photo-grids__panel {
+  background-color: white;
+  min-height: 79px;
+  width: 100%;
+  display: flex;
+  color: black;
+  justify-content: space-between;
+  align-items: center;
+}

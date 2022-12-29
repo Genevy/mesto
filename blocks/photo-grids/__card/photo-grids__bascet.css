@@ -1,0 +1,18 @@
+.photo-grids__cart {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  background-image: url(../../../images/cart.svg);
+  width: 18px;
+  height: 19px;
+  object-fit: cover;
+  object-position: center center;
+  cursor: pointer;
+  transition: opacity 0.3s linear;
+}
+
+.photo-grids__cart:hover {
+  opacity: 0.6;
+}

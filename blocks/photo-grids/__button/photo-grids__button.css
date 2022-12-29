@@ -1,0 +1,15 @@
+.photo-grids__button {
+  width: 22px;
+  height: 19px;
+  margin-right: 20px;
+  background-image: url(../../../images/serdce.svg);
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.3s linear;
+}
+
+.photo-grids__button:hover {
+  opacity: 0.5;
+}

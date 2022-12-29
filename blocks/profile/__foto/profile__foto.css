@@ -1,0 +1,15 @@
+.profile__foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media screen and (max-width: 710px) {
+  .profile__foto {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,25 @@
+.profile__button {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  background-image: url(../../../images/VectorPensl.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 1px #FFFFFF solid;
+  cursor: pointer;
+  margin: 0 0 22px 19px;
+  padding: 0;
+  transition: opacity 0.3s linear;
+}
+
+@media screen and (max-width: 710px) {
+  .profile__button {
+    width: 18px;
+    height: 18px;
+    margin: 4px 19px 0 10px;
+  }
+}
+
+.profile__button:hover {
+  opacity: 0.6;
+}

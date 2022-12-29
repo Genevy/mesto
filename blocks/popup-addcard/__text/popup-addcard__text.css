@@ -1,0 +1,18 @@
+.popup-addcard__text {
+  border: none;
+  border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+  width: 358px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  margin: 0 0 28px 35px;
+}
+
+@media screen and (max-width: 575px) {
+  .popup-addcard__text {
+    margin-bottom: 26px;
+    margin-left: 20px;
+    line-height: 29px;
+    width: 238px;
+  }
+}

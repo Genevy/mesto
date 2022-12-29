@@ -1,0 +1,29 @@
+.popup-addcard__button {
+  width: 358px;
+  height: 50px;
+  margin: 21px 0 0 36px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  background-color: black;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.3s linear;
+}
+
+@media screen and (max-width: 575px) {
+  .popup-addcard__button {
+    width: 238px;
+    height: 46px;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 19px;
+    margin-left: 22px;
+  }
+}
+
+.popup-addcard__button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
