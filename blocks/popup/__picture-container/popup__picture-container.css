@@ -1,0 +1,6 @@
+.popup__picture-container {
+  position: relative;
+  display: block;
+  align-self: center;
+  margin: 0 auto;
+}

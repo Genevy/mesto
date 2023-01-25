@@ -1,0 +1,24 @@
+.profile__about {
+  grid-area: profile__about;
+  align-self: flex-start;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 336px;
+}
+
+@media screen and (max-width: 768px) {
+  .profile__about {
+    font-size: 14px;
+    text-align: center;
+    padding: 0 0 0 20px;
+    max-width: 252px;
+  }
+}

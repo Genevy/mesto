@@ -1,0 +1,7 @@
+.popup__picture {
+  align-self: center;
+  display: block;
+  max-height: 75vh;
+  max-width: 75vw;
+  margin: 0 auto;
+}

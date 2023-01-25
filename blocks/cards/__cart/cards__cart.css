@@ -1,0 +1,21 @@
+.cards__cart {
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url("../../../images/cart.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  border-style: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 18px;
+  height: 19px;
+  margin: 0;
+  padding: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cards__cart:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
