@@ -33,7 +33,7 @@ main {
 }
 
 /**
- * Correct the font size and margin on `h1` cards within `section` and
+ * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
@@ -118,7 +118,7 @@ small {
 }
 
 /**
- * Prevent `sub` and `sup` cards from affecting the line height in
+ * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
  */
 
@@ -232,9 +232,9 @@ fieldset {
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` cards in IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
  * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` cards in all browsers.
+ *    `fieldset` elements in all browsers.
  */
 
 legend {
