@@ -15,26 +15,26 @@ const bigPictureCaption = document.querySelector('.popup__caption');
 const cardsContainer = document.querySelector('.cards');
 const cardsTemplate = document.querySelector('#cardsTemplate').content.querySelector('.cards__item');
 const popupList = document.querySelectorAll('.popup');
-const popupEditProfile = document.querySelector('.popup_type_profile');
-const inputsProfileForm = Array.from(popupEditProfile.querySelectorAll('.popup__input'));
-const profileFormSubmitBtn = popupEditProfile.querySelector('.popup__button_type_profile');
+const popupProfile = document.querySelector('.popup_type_profile');
+const profileFormInputs = Array.from(popupProfile.querySelectorAll('.popup__input'));
+const profileFormSubmitBtn = popupProfile.querySelector('.popup__button_type_profile');
 const popupAddCards = document.querySelector('.popup_type_card');
-const inputsCardsForm = Array.from(popupAddCards.querySelectorAll('.popup__input'));
+const inputCardForms = Array.from(popupAddCards.querySelectorAll('.popup__input'));
 const cardsFormSubmitBtn = popupAddCards.querySelector('.popup__button_type_element');
 
 const createCard = ({ name, link }) => {
   const cardsItem = cardsTemplate.cloneNode(true);
-  const imageLink = cardsItem.querySelector('.cards__image');
+  const cardImage = cardsItem.querySelector('.cards__image');
   const imageTitle = cardsItem.querySelector('.cards__title');
   const elementDeleteBtn = cardsItem.querySelector('.cards__cart');
   const likeButton = cardsItem.querySelector('.cards__like');
 
-  imageLink.src = link;
+  cardImage.src = link;
   imageTitle.textContent = name;
-  imageLink.alt = name;
+  cardImage.alt = name;
 
-  imageLink.addEventListener('click', () => openBigPicture({ name, link }));
-  likeButton.addEventListener('click', () => makeLikeActive(likeButton));
+  cardImage.addEventListener('click', () => openBigPicture({ name, link }));
+  likeButton.addEventListener('click', () => toggleLike(likeButton));
   elementDeleteBtn.addEventListener('click', deleteElement);
 
   return cardsItem;
@@ -49,7 +49,7 @@ function deleteElement(evt) {
   evt.target.closest('.cards__item').remove();
 }
 
-function makeLikeActive(likeButton) {
+function toggleLike(likeButton) {
   likeButton.classList.toggle('cards__like_active');
 }
 
@@ -81,7 +81,7 @@ elementCloseButton.addEventListener('click', () => {
   closePopup(popupAddCards);
 });
 profileCloseButton.addEventListener('click', () => {
-  closePopup(popupEditProfile);
+  closePopup(popupProfile);
 });
 pictureCloseButton.addEventListener('click', () => {
   closePopup(popupBigPicture);
@@ -96,16 +96,17 @@ popupList.forEach((popup) => {
 });
 
 profileEditButton.addEventListener('click', () => {
-  openPopup(popupEditProfile);
+ inputName.value = profileName.textContent;
+ inputAbout.value = profileAbout.textContent;
+  openPopup(popupProfile);
 });
 
-popupEditProfile.addEventListener('submit', (evt) => {
+popupProfile.addEventListener('submit', (evt) => {
   evt.preventDefault();
   profileName.textContent = inputName.value;
   profileAbout.textContent = inputAbout.value;
   evt.target.reset();
-  closePopup(popupEditProfile);
-  disableSubmitButton(popupEditProfile, validationConfig);
+  closePopup(popupProfile);
 })
 
 pictureAddButton.addEventListener('click', () => {
@@ -119,5 +120,5 @@ popupAddCards.addEventListener('submit', (evt) => {
   renderCard({ name, link });
   evt.target.reset();
   closePopup(popupAddCards);
-  disableSubmitButton(popupAddCards, validationConfig);
+ disableSubmitButton(popupAddCards, validationConfig);
 })

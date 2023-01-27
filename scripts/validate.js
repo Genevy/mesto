@@ -24,7 +24,7 @@ function hideInputError(formElement, inputElement, config) {
 function checkInputValidity(formElement, inputElement, config) {
   if (inputElement.validity.valid) {
       hideInputError(formElement, inputElement, config);
-    } 
+    }
     else {
       showInputError(formElement, inputElement, config);
     }
@@ -37,10 +37,9 @@ function hasInvalidInput(inputList) {
 }
 
 function toggleButtonState(inputList, buttonElement, config) {
-  if (hasInvalidInput(inputList)) {
-      buttonElement.classList.add(config.inactiveButtonClass);
-      buttonElement.disabled = true;
-   } 
+   if (hasInvalidInput(inputList)) {
+      disableSubmitButton(buttonElement, config)
+   }
   else {
       buttonElement.classList.remove(config.inactiveButtonClass);
       buttonElement.disabled = false;
@@ -69,8 +68,7 @@ function deleteValidationErr(formElement, inputList, config) {
   })
 }
 
-function disableSubmitButton(formElement, config) {
-  const buttonElement = formElement.querySelector(config.submitButtonSelector);
+function disableSubmitButton(buttonElement, config) {
   buttonElement.classList.add(config.inactiveButtonClass);
   buttonElement.disabled = true;
 }
