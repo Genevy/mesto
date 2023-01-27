@@ -1,6 +1,4 @@
-const elementCloseButton = document.querySelector('.popup__close_type_cards');
-const profileCloseButton = document.querySelector('.popup__close_type_profile');
-const pictureCloseButton = document.querySelector('.popup__close_type_picture');
+const closeButtons = document.querySelectorAll('.popup__close');
 const profileEditButton = document.querySelector('.profile__button');
 const pictureAddButton = document.querySelector('.profile__add-button');
 const inputName = document.querySelector('.popup__input_type_name');
@@ -77,14 +75,9 @@ const closePopupEsc = (evt) => {
   };
 };
 
-elementCloseButton.addEventListener('click', () => {
-  closePopup(popupAddCards);
-});
-profileCloseButton.addEventListener('click', () => {
-  closePopup(popupProfile);
-});
-pictureCloseButton.addEventListener('click', () => {
-  closePopup(popupBigPicture);
+closeButtons.forEach((button) => {
+  const popup = button.closest('.popup');
+  button.addEventListener('click', () => closePopup(popup));
 });
 
 popupList.forEach((popup) => {
@@ -120,5 +113,5 @@ popupAddCards.addEventListener('submit', (evt) => {
   renderCard({ name, link });
   evt.target.reset();
   closePopup(popupAddCards);
- disableSubmitButton(popupAddCards, validationConfig);
+  disableSubmitButton(evt.submitter, validationConfig);
 })
