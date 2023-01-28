@@ -39,8 +39,9 @@ const createCard = ({ name, link }) => {
 }
 
 function renderCard({ name, link }) {
-  cardsContainer.prepend(createCard({ name, link }));
+  cardsContainer.append(createCard({ name, link }));
 }
+
 initialCards.forEach(renderCard);
 
 function deleteElement(evt) {
