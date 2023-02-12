@@ -17,81 +17,42 @@
             <img class="profile__image" src="./images/profile.jpg" alt="Изображение профиля">
             <div class="profile__info">
               <h1 class="profile__name">Жак-Ив Кусто</h1>
-              <button
-                class="profile__button"
-                type="button"
-                aria-label="Редактировать"></button>
+              <button class="profile__button" type="button" aria-label="Редактировать"></button>
               <p class="profile__about">Исследователь океана</p>
             </div>
           </div>
-          <button
-            class="profile__add-button"
-            type="button"
-            aria-label="Добавить"></button>
+          <button class="profile__add-button" type="button" aria-label="Добавить"></button>
         </section>
         <section class="cards" aria-label="Карточки мест">
           <template id="cardsTemplate">
             <div class="cards__item">
-              <button
-                class="cards__cart"
-                type="button"
-                aria-label="Удалить"></button>
+              <button class="cards__cart" type="button" aria-label="Удалить"></button>
               <img class="cards__image" src="#" alt="">
               <div class="cards__caption">
                 <h2 class="cards__title"></h2>
-                <button
-                  class="cards__like"
-                  type="button"
-                  aria-label="Нравится"></button>
+                <button class="cards__like" type="button" aria-label="Нравится"></button>
               </div>
             </div>
           </template>
         </section>
       </main>
       <footer class="footer">
-        <p class="footer__copyright">© 2023 Mesto Russia</p>
+        <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
       </footer>
       <div class="popup popup_type_profile">
         <div class="popup__container">
-          <form
-            class="popup__form"
-            name="editProfileForm"
-            action="#"
-            method="get"
-            novalidate>
-            <button
-              class="popup__close"
-              type="button"
-              aria-label="Закрыть"></button>
+          <form class="popup__form" name="editProfileForm" action="#" method="get" novalidate>
+            <button class="popup__close" type="button" aria-label="Закрыть"></button>
             <h3 class="popup__title">Редактировать профиль</h3>
             <div class="popup__inputs">
-              <input
-                id="profile-name"
-                type="text"
-                class="popup__input popup__input_type_name"
-                value=""
-                placeholder="Ваше имя"
-                name="name"
-                minlength="2"
-                maxlength="40"
-                required>
+              <input id="profile-name" type="text" class="popup__input popup__input_type_name"
+                value="" placeholder="Ваше имя" name="name" minlength="2" maxlength="40" required>
               <span class="profile-name-error popup__error"></span>
-              <input
-                id="profile-about"
-                type="text"
-                class="popup__input popup__input_type_about"
-                placeholder="Ваше хобби или профессия"
-                name="about"
-                value=""
-                minlength="2"
-                maxlength="200"
-                required>
+              <input id="profile-about" type="text" class="popup__input popup__input_type_about"
+                placeholder="Ваше хобби или профессия" name="about" value="" minlength="2" maxlength="200" required>
               <span class="profile-about-error popup__error"></span>
             </div>
-            <button
-              class="popup__button popup__button_type_profile popup__button_disabled"
-              type="submit"
-              disabled>
+            <button class="popup__button popup__button_type_profile popup__button_disabled" type="submit" disabled>
               Сохранить
             </button>
           </form>
@@ -99,47 +60,22 @@
       </div>
       <div class="popup popup_type_card">
         <div class="popup__container">
-          <form
-            class="popup__form"
-            name="newItemForm"
-            action="#"
-            method="get"
-            novalidate>
-            <button
-              class="popup__close"
-              type="button"
-              aria-label="Закрыть"></button>
+          <form class="popup__form" name="newItemForm" action="#" method="get" novalidate>
+            <button class="popup__close" type="button" aria-label="Закрыть"></button>
             <h2 class="popup__title">Новое место</h2>
             <div class="popup__inputs">
               <label>
-                <input
-                  id="cards-title"
-                  type="text"
-                  class="popup__input popup__input_type_cards-title"
-                  placeholder="Название"
-                  value=""
-                  name="name"
-                  minlength="2"
-                  maxlength="30"
-                  required>
+                <input id="cards-title" type="text" class="popup__input popup__input_type_cards-title"
+                  placeholder="Название" value="" name="name" minlength="2" maxlength="30" required>
                 <span class="cards-title-error popup__error"></span>
               </label>
               <label>
-                <input
-                  id="cards-link"
-                  type="url"
-                  class="popup__input popup__input_type_cards-link"
-                  placeholder="Ссылка на картинку"
-                  value=""
-                  name="link"
-                  required>
+                <input id="cards-link" type="url" class="popup__input popup__input_type_cards-link"
+                  placeholder="Ссылка на картинку" value="" name="link" required>
                 <span class="cards-link-error popup__error"></span>
               </label>
             </div>
-            <button
-              class="popup__button popup__button_type_element popup__button_disabled"
-              type="submit"
-              disabled>
+            <button class="popup__button popup__button_type_element popup__button_disabled" type="submit" disabled>
               Создать
             </button>
           </form>
@@ -147,10 +83,7 @@
       </div>
       <div class="popup popup_type_picture">
         <figure class="popup__picture-container">
-          <button
-            class="popup__close"
-            type="button"
-            aria-label="Закрыть"></button>
+          <button class="popup__close" type="button" aria-label="Закрыть"></button>
           <img class="popup__picture" src="#" alt="">
           <figcaption>
             <p class="popup__caption"></p>
@@ -158,8 +91,6 @@
         </figure>
       </div>
     </div>
-    <script src="./scripts/validate.js"></script>
-    <script src="./scripts/initialcards.js"></script>
-    <script src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
