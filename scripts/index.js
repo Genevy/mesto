@@ -31,10 +31,13 @@ const validationConfig = {
 };
 
 const editProfileFormValidator = new FormValidator(validationConfig, editProfileForm);
-const disableSubmitButton = new FormValidator(validationConfig, newItemForm);
+const newItemFormValidator = new FormValidator(validationConfig, newItemForm);
 
 editProfileFormValidator.enableValidation();
-disableSubmitButton.enableValidation();
+newItemFormValidator.enableValidation();
+
+editProfileFormValidator.resetValidation()
+newItemFormValidator.resetValidation()
 
 
 function createCard(item) {
@@ -91,6 +94,7 @@ profileEditButton.addEventListener('click', () => {
   openPopup(popupEditProfile);
   inputName.value = profileName.textContent;
   inputAbout.value = profileAbout.textContent;
+  editProfileFormValidator.resetValidation()
 });
 
 popupEditProfile.addEventListener('submit', (evt) => {
@@ -101,6 +105,8 @@ popupEditProfile.addEventListener('submit', (evt) => {
 })
 
 pictureAddButton.addEventListener('click', () => {
+  newItemForm.reset();
+  newItemFormValidator.resetValidation()
   openPopup(popupAddCards);
 });
 
@@ -109,7 +115,5 @@ popupAddCards.addEventListener('submit', (evt) => {
   const link = linkInput.value;
   const name = titleInput.value;
   renderCard({ name, link });
-  evt.target.reset();
   closePopup(popupAddCards);
-  disableSubmitButton(evt.submitter, validationConfig);
 })
