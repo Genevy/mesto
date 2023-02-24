@@ -57,7 +57,7 @@ initialCards.forEach(renderCard);
 const handleCardClick = ({ name, link }) => {
   bigPicture.src = link;
   bigPictureCaption.textContent = name;
-  bigPicture.alt = `${name}.`;
+  bigPicture.alt = `${name}`;
   openPopup(popupBigPicture);
 };
 

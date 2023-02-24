@@ -13,17 +13,25 @@ export class Card {
 
   generateCard = () => {
     this._element = this._getTemplate();
-    this._cardImg = this._element.querySelector('.cards__image');
-    this._cardTitle = this._element.querySelector('.cards__title');
-    this._likeButton = this._element.querySelector('.cards__like');
-    this._elementDeleteBtn = this._element.querySelector('.cards__cart');
+      this._cardImage = this._element.querySelector('.cards__image');
+      this._cardTitle = this._element.querySelector('.cards__title');
+      this._likeButton = this._element.querySelector('.cards__like');
+      this._elementDeleteBtn = this._element.querySelector('.cards__cart');
 
-    this._cardTitle.textContent = this._name;
-    this._cardImg.src = this._link;
-    this._cardImg.alt = `${this._name}.`;
+      this._cardTitle.textContent = this._name;
+      this._cardImage.src = this._link;
+      this._cardImage.alt = `${this._name}`;
+
+      const noImage = './images/noimage.jpg';
+
+      this._cardImage.onerror = () => {
+      this._cardImage.src = noImage;
+      this._link = noImage;
+      this._cardImage.alt = `${this._name} - фото не загружено`;
+      this._cardTitle.textContent = `${this._name} - фото не загружено`;
+    };
 
     this._setEventListeners();
-
     return this._element;
   }
 
@@ -36,7 +44,7 @@ export class Card {
       this._deleteElement()
     });
 
-    this._cardImg.addEventListener("click", () => {
+    this._cardImage.addEventListener("click", () => {
       this._handleCardClick()
     });
   }
