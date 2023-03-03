@@ -16,5 +16,7 @@
 * Figma
 * JavaScript
 * Webpack
-## [Проектная работа на GitHub Pages](https://genevy.github.io/mesto/)
+##
+
+[Проектная работа на GitHub Pages](https://genevy.github.io/mesto/)
 
