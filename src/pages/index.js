@@ -43,7 +43,7 @@ profileEditButton.addEventListener('click', () => {
 });
 
 function createCard({ name, link }) {
-  return new Card({ name, link }, '#elementsTemplate', handleCardClick).generateCard();
+  return new Card({ name, link }, '#cardsTemplate', handleCardClick).generateCard();
 }
 
 const section = new Section(
