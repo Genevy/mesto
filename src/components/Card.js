@@ -8,7 +8,7 @@ export default class Card {
 
   generateCard = () => {
       this._element = this._template.querySelector('.cards__item').cloneNode(true);
-      this._cardImage = this._element.querySelector('.cards__image');
+      this._cardImg = this._element.querySelector('.cards__image');
       this._cardTitle = this._element.querySelector('.cards__title');
       this._likeButton = this._element.querySelector('.cards__like');
       this._elementDeleteBtn = this._element.querySelector('.cards__cart');

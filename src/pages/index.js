@@ -65,7 +65,7 @@ pictureAddButton.addEventListener('click', () => {
 });
 
 const popupAddElements = new PopupWithForm(
-  ".popup__inputs",
+  ".popup_type_card",
   (values) => {
     section.addItem(createCard(values));
     popupAddElements.close();
@@ -74,7 +74,7 @@ const popupAddElements = new PopupWithForm(
 
 popupAddElements.setEventListeners();
 
-const popupWithImage = new PopupWithImage(".popup__picture");
+const popupWithImage = new PopupWithImage(".popup_type_picture");
 
 popupWithImage.setEventListeners();
 
