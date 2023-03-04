@@ -38,7 +38,6 @@ popupEditProfile.setEventListeners();
 profileEditButton.addEventListener('click', () => {
   popupEditProfile.open();
   popupEditProfile.setInputValues(userInfo.getUserInfo());
-  editProfileFormValidator.toggleButtonState();
   editProfileFormValidator.resetValidation();
 });
 
@@ -60,7 +59,6 @@ section.renderCard();
 
 pictureAddButton.addEventListener('click', () => {
   popupAddElements.open();
-  newItemFormValidator.toggleButtonState();
   newItemFormValidator.resetValidation();
 });
 
@@ -78,6 +76,6 @@ const popupWithImage = new PopupWithImage(".popup_type_picture");
 
 popupWithImage.setEventListeners();
 
-function handleCardClick() {
-  popupWithImage.open(this._name, this._link);
+function handleCardClick(name, link) {
+  popupWithImage.open(name, link);
 }
