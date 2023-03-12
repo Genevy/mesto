@@ -1,6 +1,8 @@
 
 # Мesto
-Проектная работа создана в рамках учебного процесса на платформе [Яндекс.Практикум](https://praktikum.yandex.ru/) по направлению ["Веб-разработчик"](https://praktikum.yandex.ru/web/)
+<a href="https://genevy.github.io/how-to-learn/" target="_blank">
+  <img src="https://raw.githubusercontent.com/Genevy/mesto/main/src/images/mesto.png" alt="Иллюстрация к проекту Научиться учиться" width="100%">
+</a>
 ## Описание
 Место - это адаптивный и интерактивный сайт-сервис для добавления фотографий. В проектной работе была применена работа с макетом в Figma, построение сложных сеток, разширенные возможности HTML и CSS с применением объектно-ориентированного программирование JS. [Проектная работа на GitHub Pages](https://genevy.github.io/mesto/)
 ## Функционал
