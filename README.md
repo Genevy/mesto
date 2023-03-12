@@ -1,7 +1,7 @@
 
 # Мesto
 
-<a href="https://genevy.github.io/how-to-learn/" target="_blank">
+<a href="https://genevy.github.io/mesto/" target="_blank">
   <img src="https://raw.githubusercontent.com/Genevy/mesto/main/src/images/mesto.png" alt="Иллюстрация к проекту Научиться учиться" width="100%">
 </a>
 
