@@ -26,8 +26,7 @@
 * File Structure and File Paths (Nested BEM)
 * Git
 * Figma
-* JavaScript
-* ECMAScript 6
+* JavaScript ECMAScript 6
 * Webpack
 * Api
 ##
