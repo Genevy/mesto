@@ -31,7 +31,10 @@
 @media screen and (max-width: 536px) {
   .form__save-button {
     margin-top: 35px;
-    padding-bottom: 14px;
+    padding-bottom: 3px;
     font-size: 14px;
+    width: 238px;
+    height: 46px;
+    line-height: 17px;
   }
 }
