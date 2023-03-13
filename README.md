@@ -1,7 +1,6 @@
-<br>
+
 <h3 align="center">Мesto</h3>
 
-####
 ##
 
 <br>
