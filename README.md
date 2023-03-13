@@ -1,7 +1,4 @@
-
 <div align="center"><h1>Мesto<sup>Russia</sup></h1></div>
-
-##
 
 <br>
 <p align="center">
