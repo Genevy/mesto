@@ -31,8 +31,4 @@
 * Api
 ##
 ####
-<<<<<<< HEAD
 © Developed by [EVGENY STRIGANOV](https://github.com/genevy)
-=======
-© Developed by [EVGENY STRIGANOV](https://github.com/genevy)
->>>>>>> 2009b7269e8782fa3e9a78aa65d5afaebeb364dddddcdcdcdcdcdcdcdcdc
