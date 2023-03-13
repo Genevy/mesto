@@ -1,13 +1,16 @@
 .profile__image {
   width: 120px;
   height: 120px;
+  background-color: #ccc;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0;
+  object-position: center;
+  overflow: hidden;
+  display: block;
+  transition: opacity .3s linear;
 }
 
-@media screen and (max-width: 768px) {
-  .profile__image {
-    margin: 0 auto 26px;
-  }
+.profile__image:hover {
+  opacity: .3;
+  cursor: pointer;
 }

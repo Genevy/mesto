@@ -1,0 +1,15 @@
+.form__set {
+  border: none;
+  margin: 0;
+  margin-top: 54px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media screen and (max-width: 536px) {
+  .form__set {
+    margin-top: 75px;
+  }
+}
