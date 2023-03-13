@@ -1,5 +1,9 @@
 
-<h2 align="center">Мesto</h3>
+<h3 align="center">Мesto</h3>
+
+<p align="center">
+Место — адаптивный, интерактивный сайт-сервис для добавления фотографий достопримечательных и знаковых мест. В проектной работе была применена работа с макетом в Figma, построение сложных сеток, разширенные возможности HTML и CSS с применением объектно-ориентированного программирование JS.
+</p>
 
 <a href="https://genevy.github.io/mesto/" target="_blank">
   <img src="https://raw.githubusercontent.com/Genevy/mesto/main/src/images/mesto.png" alt="Иллюстрация к проекту Место" width="100%">
