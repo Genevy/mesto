@@ -1,4 +1,4 @@
-<div align="center"><h3>Мesto<sup>Russia</sup></h3></div>
+<div align="center"><h3>Мesto</h3></div>
 
 ##
 
