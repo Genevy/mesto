@@ -1,5 +1,5 @@
 
-<div align="center"><h3>Мesto</h3><span><sup>Russia</sup></span></div>
+<div align="center"><h3>Мesto</h3><sup>Russia</sup></div>
 
 ##
 
