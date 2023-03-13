@@ -1,0 +1,12 @@
+.form__input-error_active {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #FF0000;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  min-height: 30px;
+}

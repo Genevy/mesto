@@ -1,16 +1,15 @@
 .footer__copyright {
-  padding: 0;
-  margin: 67px 0 0 0;
-  text-align: left;
-  color: #545454;
+  max-width: 318px;
+  margin: 0;
+  font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 100%;
+  line-height: 1.2;
+  color: #545454;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 426px) {
   .footer__copyright {
     font-size: 14px;
-    margin: 48px 0 0 0;
   }
 }

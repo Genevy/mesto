@@ -1,19 +1,12 @@
 .header {
-  width: 69%;
-  display: flex;
-  margin: 0 auto;
-  justify-content: flex-start;
+  max-width: 880px;
   border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+  padding-top: 43px;
+  margin: auto;
 }
 
-@media screen and (max-width: 1269px) {
+@media screen and (max-width: 900px) {
   .header {
-    width: 89%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .header {
-    width: 100%;
+    padding-top: 28px;
   }
 }
