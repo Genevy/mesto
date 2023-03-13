@@ -8,7 +8,7 @@
 </p>
 
 <br>
-<p align="center">🔎 Preview on <a href="https://genevy.github.io/mesto/"><strong>GitHub Pages »</strong></a></p>
+<p align="center">🔎 Explore on <a href="https://genevy.github.io/mesto/"><strong>GitHub Pages »</strong></a></p>
 <br>
 <a href="https://genevy.github.io/mesto/" target="_blank">
   <img src="https://raw.githubusercontent.com/Genevy/mesto/main/src/images/mesto.png" alt="Иллюстрация к проекту Место" width="100%">
