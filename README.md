@@ -11,10 +11,10 @@
   <img src="https://raw.githubusercontent.com/Genevy/mesto/main/src/images/mesto.png" alt="Иллюстрация к проекту Место" width="100%">
 </a>
 
-## Функционал
+### Функционал
 * Адаптивный дизайн: вэб-сервис адаптирован как для стационарных ПК так и для мобильных устройств.
 * Расширенный функционал: реакции на действия пользователей с применением JavaScript.
-## Технологии
+### Технологии
 * Flexbox
 * Grid Layout
 * Positioning Elements
