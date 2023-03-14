@@ -30,10 +30,10 @@ const addAvatarFormValidator = new FormValidator (validationParameters, formAddA
 addAvatarFormValidator.enableValidation();
 
 const userProfile = new UserInfo(profileUser);
-const popupEditProfile = new PopupWithForm('.popup_type_edit', formSubmitProfile);
+const popupEditProfile = new PopupWithForm('.popup_type_edit', handleProfileFormSubmit);
 const popupOpenImage = new PopupWithImage('.popup_type_image');
-const popupAddCard = new PopupWithForm('.popup_type_card', formSubmitCard);
-const popupAddAvatar = new PopupWithForm('.popup_type_avatar', formSubmitAvatar);
+const popupAddCard = new PopupWithForm('.popup_type_card', addImageFormSubmit);
+const popupAddAvatar = new PopupWithForm('.popup_type_avatar', changeAvatarFormSubmit);
 const popupDeleteCard = new PopupWithConfirm('.popup_type_confirm');
 const api = new Api(apiParameters);
 
@@ -107,7 +107,7 @@ function handleProfile() {
   jobInput.value = userData.about;
 };
 
-function formSubmitProfile({ name, about }) {
+function handleProfileFormSubmit({ name, about }) {
   popupEditProfile.setSavingMode();
   api.updateUserInfo({ name: name, about: about })
     .then((data) => {
@@ -119,7 +119,7 @@ function formSubmitProfile({ name, about }) {
     .finally(() => popupEditProfile.removeSavingMode())
 };
 
-function formSubmitAvatar({ avatar }) {
+function changeAvatarFormSubmit({ avatar }) {
   popupAddAvatar.setSavingMode();
   api.updateUserAvatar({ avatar: avatar })
     .then((data) => {
@@ -131,7 +131,7 @@ function formSubmitAvatar({ avatar }) {
     .finally(() => popupAddAvatar.removeSavingMode())
 }
 
-function formSubmitCard(data) {
+function addImageFormSubmit(data) {
   popupAddCard.setSavingMode();
   api.addNewCard({ name: data.name, link: data.link })
     .then((res) => {
