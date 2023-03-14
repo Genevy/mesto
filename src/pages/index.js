@@ -44,7 +44,7 @@ Promise.all([api.getUserInfo(), api.getAllCards()])
     cardsGalegy.renderItems(items);
   })
   .catch ((err) => {
-    console.log (err);
+    console.log ('ERROR', err);
   })
 
 function createCard(cardData) {
@@ -58,14 +58,14 @@ function createCard(cardData) {
           .deleteLike(currentCardData._id)
           .then((updatedCard) => likeCallback(updatedCard.likes))
           .catch((err) => {
-            console.log('Ошибка', err);
+            console.log('ERROR', err);
           })
       } else {
         api
           .setLike(currentCardData._id)
           .then((updatedCard) => likeCallback(updatedCard.likes))
           .catch((err) => {
-            console.log('Ошибка', err);
+            console.log('ERROR', err);
           })
       }
     },
@@ -108,39 +108,40 @@ function handleProfile() {
 };
 
 function handleProfileFormSubmit({ name, about }) {
-  popupEditProfile.setSavingMode();
-  api.updateUserInfo({ name: name, about: about })
+
+  return api.updateUserInfo({ name: name, about: about })
     .then((data) => {
-      userProfile.setUserInfo(data)
+      userProfile.setUserInfo(data);
+      this.close();
     })
     .catch((err) => {
       console.log('ERROR', err);
     })
-    .finally(() => popupEditProfile.removeSavingMode())
+
 };
 
 function changeAvatarFormSubmit({ avatar }) {
   popupAddAvatar.setSavingMode();
-  api.updateUserAvatar({ avatar: avatar })
+  return api.updateUserAvatar({ avatar: avatar })
     .then((data) => {
-      userProfile.setUserAvatar(data)
+      userProfile.setUserAvatar(data);
     })
     .catch((err) => {
       console.log('ERROR', err);
     })
-    .finally(() => popupAddAvatar.removeSavingMode())
+
 }
 
 function addImageFormSubmit(data) {
   popupAddCard.setSavingMode();
-  api.addNewCard({ name: data.name, link: data.link })
+  return api.addNewCard({ name: data.name, link: data.link })
     .then((res) => {
       cardsGalegy.addItem(createCard(res));
     })
     .catch((err) => {
       console.log('ERROR', err);
     })
-    .finally(() => popupAddCard.removeSavingMode())
+
 };
 
 popupDeleteCard.setEventListeners();

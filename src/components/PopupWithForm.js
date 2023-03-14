@@ -19,22 +19,15 @@ export default class PopupWithForm extends Popup {
   }
 
   setEventListeners() {
-
-    this._form.addEventListener('submit', (evt) => {
-      evt.preventDefault();
-      this._handleFormSubmit(this._getInputValues());
-      this.close();
-    })
-
     super.setEventListeners();
-  }
 
-  setSavingMode() {
-    this._submitButton.textContent = 'Сохранение...'
-  }
-
-  removeSavingMode() {
-    this._submitButton.textContent = 'Сохранить'
+    this._form.addEventListener('submit', () => {
+      const initialText = this._submitButton.textContent;
+      this._submitButton.textContent = 'Сохранение...';
+      this._submitForm(this._getInputValues())
+        .then(() => this.close())
+          this._submitButton.textContent = initialText;
+        })
   }
 
   close() {
