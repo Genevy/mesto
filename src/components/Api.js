@@ -36,7 +36,7 @@ export default class Api {
       {
         method: 'POST',
         headers: this._headers,
-        body: JSON.stringify({ name: cardData.name, link: cardData.link })
+        body: JSON.stringify(cardData)
       })
       .then(this._handleReply)
   }
@@ -68,12 +68,12 @@ export default class Api {
       .then(this._handleReply)
   }
 
-  updateUserAvatar({ avatar }) {
+  updateUserAvatar(data) {
     return fetch(`${this._url}/users/me/avatar`,
       {
         headers: this._headers,
         method: 'PATCH',
-        body: JSON.stringify({ avatar })
+        body: JSON.stringify(data)
       })
       .then(this._handleReply)
   }

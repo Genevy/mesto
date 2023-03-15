@@ -30,10 +30,10 @@ const addAvatarFormValidator = new FormValidator (validationParameters, formAddA
 addAvatarFormValidator.enableValidation();
 
 const userProfile = new UserInfo(profileUser);
-const popupEditProfile = new PopupWithForm('.popup_type_edit', handleProfileFormSubmit);
+const popupEditProfile = new PopupWithForm('.popup_type_edit', formSubmitProfile);
 const popupOpenImage = new PopupWithImage('.popup_type_image');
-const popupAddCard = new PopupWithForm('.popup_type_card', addImageFormSubmit);
-const popupAddAvatar = new PopupWithForm('.popup_type_avatar', changeAvatarFormSubmit);
+const popupAddCard = new PopupWithForm('.popup_type_card', formSubmitCard);
+const popupAddAvatar = new PopupWithForm('.popup_type_avatar', formSubmitAvatar);
 const popupDeleteCard = new PopupWithConfirm('.popup_type_confirm');
 const api = new Api(apiParameters);
 
@@ -44,7 +44,7 @@ Promise.all([api.getUserInfo(), api.getAllCards()])
     cardsGalegy.renderItems(items);
   })
   .catch ((err) => {
-    console.log ('ERROR', err);
+    console.log (err);
   })
 
 function createCard(cardData) {
@@ -107,41 +107,34 @@ function handleProfile() {
   jobInput.value = userData.about;
 };
 
-function handleProfileFormSubmit({ name, about }) {
-
-  return api.updateUserInfo({ name: name, about: about })
+function formSubmitProfile(data) {
+  return api.updateUserInfo(data)
     .then((data) => {
-      userProfile.setUserInfo(data);
-      this.close();
+      userProfile.setUserInfo(data)
     })
     .catch((err) => {
       console.log('ERROR', err);
     })
-
 };
 
-function changeAvatarFormSubmit({ avatar }) {
-  popupAddAvatar.setSavingMode();
-  return api.updateUserAvatar({ avatar: avatar })
+function formSubmitAvatar(data) {
+  return api.updateUserAvatar(data)
     .then((data) => {
-      userProfile.setUserAvatar(data);
+      userProfile.setUserAvatar(data)
     })
     .catch((err) => {
       console.log('ERROR', err);
     })
+};
 
-}
-
-function addImageFormSubmit(data) {
-  popupAddCard.setSavingMode();
-  return api.addNewCard({ name: data.name, link: data.link })
+function formSubmitCard(data) {
+  return api.addNewCard(data)
     .then((res) => {
       cardsGalegy.addItem(createCard(res));
     })
     .catch((err) => {
       console.log('ERROR', err);
     })
-
 };
 
 popupDeleteCard.setEventListeners();
