@@ -30,10 +30,10 @@ const addAvatarFormValidator = new FormValidator (validationParameters, formAddA
 addAvatarFormValidator.enableValidation();
 
 const userProfile = new UserInfo(profileUser);
-const popupEditProfile = new PopupWithForm('.popup_type_edit', formSubmitProfile);
+const popupEditProfile = new PopupWithForm('.popup_type_edit', changeProfileFormSubmit);
 const popupOpenImage = new PopupWithImage('.popup_type_image');
-const popupAddCard = new PopupWithForm('.popup_type_card', formSubmitCard);
-const popupAddAvatar = new PopupWithForm('.popup_type_avatar', formSubmitAvatar);
+const popupAddCard = new PopupWithForm('.popup_type_card', createCardFormSubmit);
+const popupAddAvatar = new PopupWithForm('.popup_type_avatar', changeAvatarFormSubmit);
 const popupDeleteCard = new PopupWithConfirm('.popup_type_confirm');
 const api = new Api(apiParameters);
 
@@ -107,7 +107,7 @@ function handleProfile() {
   jobInput.value = userData.about;
 };
 
-function formSubmitProfile(data) {
+function changeProfileFormSubmit(data) {
   return api.updateUserInfo(data)
     .then((data) => {
       userProfile.setUserInfo(data)
@@ -117,7 +117,7 @@ function formSubmitProfile(data) {
     })
 };
 
-function formSubmitAvatar(data) {
+function changeAvatarFormSubmit(data) {
   return api.updateUserAvatar(data)
     .then((data) => {
       userProfile.setUserAvatar(data)
@@ -127,7 +127,7 @@ function formSubmitAvatar(data) {
     })
 };
 
-function formSubmitCard(data) {
+function createCardFormSubmit(data) {
   return api.addNewCard(data)
     .then((res) => {
       cardsGalegy.addItem(createCard(res));
