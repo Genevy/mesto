@@ -13,7 +13,7 @@
   grid-column-end: 3;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 940px) {
   .profile__about {
     font-size: 14px;
     text-align: center;

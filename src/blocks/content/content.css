@@ -1,11 +1,11 @@
 .content {
   max-width: 880px;
   margin: 0 auto;
-  min-height: calc(100vh - 271px);
+  min-height: calc(100vh - 269px);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 940px) {
   .content {
-    min-height: calc(100vh - 233px);
+    min-height: calc(100vh - 278px);
   }
 }

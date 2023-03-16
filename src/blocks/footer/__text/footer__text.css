@@ -1,4 +1,4 @@
-.footer__copyright {
+.footer__text {
   max-width: 318px;
   margin: 0;
   font-style: normal;
@@ -9,7 +9,8 @@
 }
 
 @media screen and (max-width: 940px) {
-  .footer__copyright {
+  .footer__text {
+    margin-top: 10px;
     font-size: 14px;
   }
 }
