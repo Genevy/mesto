@@ -31,4 +31,4 @@
 * Api
 ##
 ####
-© Developed by [EVGENY STRIGANOV](https://github.com/genevy)
+© Developed by [Evgeny Striganov](https://github.com/genevy)
