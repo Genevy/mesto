@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="black">
+  <meta name="robots" content="nofollow">
   <meta name="description" content="Место — адаптивный, интерактивный сайт-сервис для добавления фотографий достопримечательных и знаковых мест">
-  <link href="<%=require('./images/favicon.png')%>" rel="shortcut icon" type="image/x-icon">
+  <link href="<%=require('./images/favicon.png')%>" rel="icon" type="image/png">
   <title>Место</title>
 </head>
 <body class="page">
   <div class="page__container">
     <header class="header">
-      <img class="header__logo" src="<%=require('./images/logo.svg')%>" alt="Пиктограмма Место Россия">
+      <img loading="lazy" class="header__logo" src="<%=require('./images/logo.svg')%>" alt="Пиктограмма Место Россия">
     </header>
     <main class="content">
       <section class="profile">
         <div class="profile__container">
           <div class="profile__avatar">
-            <img class="profile__image" src="<%=require('./images/avatar.jpg')%>" alt="Изображение профиля">
+            <img loading="lazy" class="profile__image" src="<%=require('./images/avatar.jpg')%>" alt="Изображение профиля">
           </div>
           <div class="profile__info">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -30,7 +32,7 @@
         <ul class="photo__list"></ul>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" lang="en">
       <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
       <p class="footer__text">Developed by <a class="footer__link" href="https://github.com/Genevy/mesto#readme">Evgeny Stiganov</a></p>
     </footer>
@@ -108,18 +110,24 @@
       </div>
     </div>
     <template id="card">
-        <li class="card" aria-label="Карточка места">
-          <img class="card__photo" src="#" alt="#">
+        <li class="card" aria-label="Карточка места" itemscope itemtype="http://schema.org/ImageObject">
+          <img loading="lazy" class="card__photo" src="#" alt="#" itemprop="contentUrl">
           <div class="card__container">
-            <h2 class="card__title"></h2>
+            <h2 class="card__title" itemprop="name"></h2>
             <div class="card__like-container">
               <button class="card__button-like" type="button" aria-label="Нравится"></button>
               <span class="card__like-counter">0</span>
             </div>
             <button class="card__recycle-bin" type="button" aria-label="Удалить"></button>
+            <span class="markup" itemprop="description">Место — адаптивный, интерактивный сайт-сервис для добавления фотографий достопримечательных и знаковых мест</span>
           </div>
         </li>
     </template>
+    <div class="markup" itemscope itemtype="http://schema.org/ImageObject">
+      <h2 itemprop="name">Место Россия</h2>
+      <img loading="lazy" src="<%=require('./images/mesto.png')%>" itemprop="contentUrl">
+      <span itemprop="description">Место — адаптивный, интерактивный сайт-сервис для добавления фотографий достопримечательных и знаковых мест</span>
+    </div>
   </div>
 </body>
 </html>
