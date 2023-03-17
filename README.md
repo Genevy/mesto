@@ -15,24 +15,24 @@
 </a>
 
 ### ⚙️ Функционал
-* Адаптивный дизайн: вэб-сервис адаптирован как для стационарных ПК так и для мобильных устройств
-* Расширенный функционал: реакции на действия пользователей с применением JavaScript
-* Интерфейс User Experience (UX)
-* Сохранение и удаление данных на сервере.
+  * Адаптивный дизайн: вэб-сервис адаптирован как для стационарных ПК так и для мобильных устройств
+  * Расширенный функционал: реакции на действия пользователей с применением JavaScript
+  * Интерфейс User Experience (UX)
+  * Сохранение и удаление данных на сервере.
 ### 🔧 Технологии
-* Flexbox
-* Grid Layout
-* Positioning Elements
-* BEM Methodology
-* File Structure and File Paths (Nested BEM)
-* Git
-* Figma
-* JavaScript ECMAScript 6
-* Node JS
-* Webpack
-* API (POST, GET, PUT, DELETE)
+  * Flexbox
+  * Grid Layout
+  * Positioning Elements
+  * BEM Methodology
+  * File Structure and File Paths (Nested BEM)
+  * Git
+  * Figma
+  * JavaScript ECMAScript 6
+  * Node JS
+  * Webpack
+  * API (POST, GET, PUT, DELETE)
 ### ✏️ Рефакторинг
-* [Create on React](https://genevy.github.io/mesto-react)
+  * [Create on React](https://genevy.github.io/mesto-react)
 ##
 ####
 © Developed by [Evgeny Striganov](https://github.com/genevy)
