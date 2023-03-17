@@ -10,6 +10,7 @@
   position: absolute;
   right: -39px;
   top: -41px;
+  transition: opacity .3s linear;
 }
 
 .popup__close:hover {

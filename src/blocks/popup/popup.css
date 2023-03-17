@@ -9,9 +9,8 @@
   right: 0;
   top: 0;
   bottom: 0;
-  max-width: 1280px;
   width: 100%;
   margin: auto;
   opacity: 0;
-  transition: visibility 0s, opacity .3s linear;
+  transition: opacity .3s, visibility 0s linear;
 }
