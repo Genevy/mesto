@@ -27,6 +27,17 @@ export default class Card {
     cardPhoto.src = this._link;
     cardPhoto.alt = this._name;
 
+    this._cardPhoto = cardPhoto;
+
+    this._cardPhoto.onerror = () => {
+      this._cardPhoto.src = "./images/noimage.jpg";
+        //this._link = cardData.link;
+        this._cardPhoto.textContent = `${this._name} - фото не загружено`;
+        this._cardPhoto.title = 'Изображение не загружено';
+        this._cardPhoto.alt = 'Изображение не загружено';
+    }
+
+
     const cardName = this._element.querySelector('.card__title');
     cardName.textContent = this._name;
 

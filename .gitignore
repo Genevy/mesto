@@ -4,3 +4,4 @@
 .nojekyll
 node_modules
 dist
+Card.js
