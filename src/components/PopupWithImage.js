@@ -13,6 +13,12 @@ export default class PopupWithImage extends Popup {
     this._popupImage.alt = name;
     this._popupImageTitle.textContent = name;
 
+    this._popupImage.onerror = () => {
+      this._popupImage.src = 'https://raw.githubusercontent.com/genevy/mesto/main/src/images/noimage.jpg';
+      this._popupImage.alt = `${name} - картинка не найдена`;
+      this._popupImageTitle.textContent = `${name} - картинка не найдена`;
+    }
+
     super.open();
   }
 }

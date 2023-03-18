@@ -30,13 +30,11 @@ export default class Card {
     this._cardPhoto = cardPhoto;
 
     this._cardPhoto.onerror = () => {
-      this._cardPhoto.src = "./images/noimage.jpg";
-        //this._link = cardData.link;
-        this._cardPhoto.textContent = `${this._name} - фото не загружено`;
-        this._cardPhoto.title = 'Изображение не загружено';
-        this._cardPhoto.alt = 'Изображение не загружено';
-    }
+      this._cardPhoto.src = 'https://raw.githubusercontent.com/genevy/mesto/main/src/images/noimage.jpg';
+      this._cardPhoto.alt = `${this._name} - картинка не найдена`;
 
+      cardName.textContent = `Нет фото`;
+    }
 
     const cardName = this._element.querySelector('.card__title');
     cardName.textContent = this._name;
