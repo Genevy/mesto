@@ -3,9 +3,10 @@
   width: 100%;
   height: 282px;
   border-radius: 10px 10px 0px 0px;
+  border: none;
   object-fit: cover;
   object-position: center;
-  background-color: #000000;
+  background-color: #c4c4c4;
 }
 
 .card__photo:hover {

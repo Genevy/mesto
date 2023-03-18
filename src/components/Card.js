@@ -29,15 +29,15 @@ export default class Card {
 
     this._cardPhoto = cardPhoto;
 
-    this._cardPhoto.onerror = () => {
-      this._cardPhoto.src = 'https://raw.githubusercontent.com/genevy/mesto/main/src/images/noimage.jpg';
-      this._cardPhoto.alt = `${this._name} - картинка не найдена`;
-
-      cardName.textContent = `Нет фото`;
-    }
-
     const cardName = this._element.querySelector('.card__title');
     cardName.textContent = this._name;
+
+    this._cardPhoto.onerror = () => {
+      this._cardPhoto.src = 'https://raw.githubusercontent.com/genevy/mesto/main/src/images/placeholder.webp';
+      this._cardPhoto.alt = `${this._name} - картинка не загружена`;
+
+      cardName.textContent = 'Фото не найдено';
+    }
 
     this._buttonLike = this._element.querySelector('.card__button-like');
     this._likeCounter = this._element.querySelector('.card__like-counter');
