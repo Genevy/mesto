@@ -1,7 +1,9 @@
 .card__container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   max-width: 243px;
-  margin: 21px auto 20px;
+  margin: 0 auto;
   align-items: center;
+  padding-top: 21px;
 }

@@ -1,14 +1,24 @@
 .card__photo {
   display: block;
-  width: 100%;
+  position: relative;
+  width: 282px;
   height: 282px;
   border-radius: 10px 10px 0px 0px;
   border: none;
   object-fit: cover;
   object-position: center;
   background-color: #c4c4c4;
+  transition: transform .5s linear;
+  overflow: hidden;
+  cursor: zoom-in;
 }
 
 .card__photo:hover {
-  cursor: pointer;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 940px) {
+  .card__photo:hover {
+    transform: none;
+  }
 }
