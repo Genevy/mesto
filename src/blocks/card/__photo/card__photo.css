@@ -10,7 +10,7 @@
   background-color: #c4c4c4;
   transition: transform .5s linear;
   overflow: hidden;
-  cursor: zoom-in;
+  cursor: pointer;
 }
 
 .card__photo:hover {
