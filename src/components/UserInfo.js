@@ -19,5 +19,9 @@ export default class UserInfo {
   setUserAvatar(data) {
     this._data = data;
     this._userAvatarSelector.src = data.avatar;
+
+    this._userAvatarSelector.onerror = () => {
+        this._userAvatarSelector.src = 'https://raw.githubusercontent.com/genevy/mesto/main/src/images/avatar_placeholder.svg';
+    }
   }
 }
