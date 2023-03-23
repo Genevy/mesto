@@ -36,7 +36,7 @@ export default class Card {
       this._cardPhoto.src = 'https://raw.githubusercontent.com/genevy/mesto/main/src/images/placeholder.webp';
       this._cardPhoto.alt = `${this._name} - картинка не загружена`;
 
-      cardName.textContent = 'Фото не найдено';
+      cardName.textContent = 'Не загружена';
     }
 
     this._buttonLike = this._element.querySelector('.card__button-like');

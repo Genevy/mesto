@@ -30,7 +30,7 @@
   * JavaScript ECMAScript 6
   * Node JS
   * Webpack
-  * API (POST, GET, PUT, DELETE)
+  * API `POST`, `GET`, `PUT`, `DELETE`, `PATCH`
 ### 🛠 Рефакторинг
   * [Create on React](https://github.com/genevy/mesto-react)
 ##
