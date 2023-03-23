@@ -21,7 +21,7 @@ export default class UserInfo {
     this._userAvatarSelector.src = data.avatar;
 
     this._userAvatarSelector.onerror = () => {
-        this._userAvatarSelector.src = 'https://raw.githubusercontent.com/genevy/mesto/main/src/images/avatar_placeholder.svg';
+      this._userAvatarSelector.src = 'https://raw.githubusercontent.com/genevy/mesto/main/src/images/avatar_placeholder.svg';
     }
   }
 }
