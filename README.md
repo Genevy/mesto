@@ -32,7 +32,7 @@
   * Webpack
   * API `POST`, `GET`, `PUT`, `DELETE`, `PATCH`
 ### 🛠 Рефакторинг
-  * [Create on React](https://github.com/genevy/mesto-react)
+  * [Create on React](https://github.com/genevy/mesto-react#readme)
 ##
 ####
 © Developed by [Evgeny Striganov](https://github.com/genevy)
