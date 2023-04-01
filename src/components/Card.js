@@ -33,7 +33,7 @@ export default class Card {
     cardName.textContent = this._name;
 
     this._cardPhoto.onerror = () => {
-      this._cardPhoto.src = 'https://raw.githubusercontent.com/genevy/mesto/main/src/images/placeholder.webp';
+      this._cardPhoto.src = 'https://raw.githubusercontent.com/genevy/mesto/main/src/images/placeholder.svg';
       this._cardPhoto.alt = `${this._name} - картинка не загружена`;
 
       cardName.textContent = 'Не загружена';
