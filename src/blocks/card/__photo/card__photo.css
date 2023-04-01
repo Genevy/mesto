@@ -7,7 +7,7 @@
   border: none;
   object-fit: cover;
   object-position: center;
-  background-color: #c4c4c4;
+  background-color: #181d1c;
   transition: transform .5s linear;
   overflow: hidden;
   cursor: pointer;

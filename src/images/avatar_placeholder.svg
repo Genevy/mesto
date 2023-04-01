@@ -1,5 +1,7 @@
+<!-- Svg Vector (c) Genevy Gravitons : https://github.com/Genevy -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
-  <circle cx="60" cy="60" r="60" fill="#c4c4c4"/>
-  <path d="M87,88.7V82.2c0-7.2-6.9-13.1-15.4-13.1H48.4C39.9,69.1,33,75,33,82.2v6.5" fill="#c4c4c4" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
-  <circle cx="60" cy="44.1" r="14" fill="#c4c4c4" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+<metadata>Svg Vector (c) Genevy Gravitons : https://github.com/Genevy</metadata>
+  <circle cx="60" cy="60" r="60" fill="#181d1c"/>
+    <path d="M80.8,87.9V81.4c0-7.2-5.3-13.1-11.8-13.1H51c-6.5,0-11.8,5.9-11.8,13.1v6.5" fill="#181d1c" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <circle cx="60" cy="44.1" r="14" fill="#181d1c" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
 </svg>
