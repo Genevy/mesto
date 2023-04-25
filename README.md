@@ -35,4 +35,4 @@
   * [Create on React](https://github.com/genevy/mesto-react#readme)
 ##
 ####
-© Developed by [Evgeny Striganov](https://github.com/genevy)
+© Developed by [Evgeny Striganov](https://github.com/genevy) jointly [Yandex Praktikum](https://practicum.yandex.ru/web/)
